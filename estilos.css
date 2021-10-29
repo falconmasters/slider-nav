@@ -1,4 +1,6 @@
-
+html {
+	scroll-behavior: smooth;
+}
 
 * {
 	padding: 0;
@@ -20,6 +22,7 @@ a {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	height: calc(100vh - 80px);
 }
 
 .hero h1 {
@@ -32,9 +35,42 @@ a {
 	color: #113CFC;
 }
 
+nav {
+	background: #fff;
+	height: 80px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	display: flex;
+	position: sticky;
+	top: 0;
+	overflow: hidden;
+}
 
+nav a {
+	flex: 1;
+	height: 100%;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #000;
+	transition: .2s ease-in-out all;
+	font-weight: 500;
+}
 
+nav a:hover {
+	background: #f0f0f0;
+}
 
+nav .indicador {
+	width: 0px;
+	height: 7px;
+	background: #113cfc;
+	position: absolute;
+	bottom: 0;
+	transition: .3s ease-out all;
+	/* transform: translate(-500px); */
+}
 
 .seccion {
 	min-height: 100vh;
@@ -79,9 +115,14 @@ a {
 
 
 @media screen and (max-width: 800px) {
-
+	nav a {
+		font-size: 14px;
+		padding: 5px;
+	}
 }
 
 @media screen and (max-width: 450px) {
-
+	nav a {
+		font-size: 12px;
+	}
 }
